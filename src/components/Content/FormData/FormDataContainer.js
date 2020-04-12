@@ -28,10 +28,6 @@ class FormDataContainer extends Component {
         })
             .then((res) => {
                 this.props.putWeatherData(res.data.weather, res.data.main, res.data.wind);
-                this.setState({
-                    cityName: ''
-                })
-
             })
             .catch((err) => {
                 console.log(err);

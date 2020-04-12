@@ -5,8 +5,8 @@ const FormData = (props) => {
 
     return (
         <div className={style.formDataContent}>
-            <input type="text" onChange={props.handleChange}/>
-            <button onClick={props.getWeatherInfo}>Send</button>
+            <p><input type="text" placeholder="Название города.." onChange={props.handleChange}/></p>
+            <button onClick={props.getWeatherInfo}>Хочу увидеть магию!</button>
         </div>
     )
 };

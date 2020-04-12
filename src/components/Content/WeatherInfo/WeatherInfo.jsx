@@ -5,7 +5,7 @@ import {simpleCore} from "../../../services/core";
 const WeatherInfo = (props) => {
 
     const tips = props.tips.map((tip, i) =>
-        <div key={i}>
+        <div key={i} className={style.tips}>
             <p>{tip}</p>
         </div>
     );
@@ -17,7 +17,7 @@ const WeatherInfo = (props) => {
     );
 
     const errors = props.errors.map((err, i) =>
-        <div key={i}>
+        <div key={i} className={style.err}>
             <p>{err}</p>
             {tips}
         </div>
@@ -25,10 +25,10 @@ const WeatherInfo = (props) => {
 
     const weather = (
         <div>
+            <span className={style.dress}><p>{simpleCore(props.main.temp)}</p></span>
             <p>Температура по Цельсию - <b>{props.main.temp}</b></p>
             <p>Скорость ветра - <b>{props.wind.speed}</b></p>
             <p>На небе - <b>{props.weather[0].main}</b></p>
-            <p>{simpleCore(props.main.temp)}</p>
         </div>
     );
 
