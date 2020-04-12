@@ -1,20 +1,32 @@
 ## Умный сервис прогноза погоды<br/>
 - задача со звездочкой
 
+
 ## Стэк<br/>
 - React<br/>
 - Redux<br/>
-- API https://openweathermap.org/api<br/>
+- Sass<br/>
+- API - https://openweathermap.org/api<br/>
+
 
 ### Пользовательский интерфейс<br/>
 - Веб сайт<br/>
 - Данные о температуре, скорости ветра, осадках полученные с API подставляются в компоненты и отображаются пользователю.
 
+
 ## Видео. Демонтрация работы приложения<br/>
 ![yandexWeather](https://github.com/mtytos/CV/blob/master/React-App.gif?raw=true)
 
+
 ## Пошаговый процесс работы программы<br/>
-- шаг<br/>
+- Инициализируется Redux `store`
+- В соответствии с данными `status` в `initState` рендарятся нужные компоненты - greetings пользователя, status = 0
+- Пользователь вводит название города `handleChange` и подтверждает нажатием кнопки `getWeatherInfo`
+- `getWeatherInfo` получает данные из `services/api` и инпута, происходит `Get` запрос на `API` (использую `axios`)
+- При ушспешном запросе промис запускает action `putWeatherData`, далее dispatch action, reducer добавляет полученные данные в `state`,
+изменяет status на 2 (success), рендарятся компоненты weather.
+- При ошибке в `catch` запускается action и изменяет ststus на 1 (failed), рендарятся компоненты errors
+
 
 ## Как запустить программу?<br/>
 - клонируем репозиторий<br/>
