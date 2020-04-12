@@ -15,7 +15,7 @@
 
 
 ## Видео. Демонтрация работы приложения<br/>
-![yandexWeather](https://github.com/mtytos/CV/blob/master/React-App.gif?raw=true)
+![yandexWeather](https://github.com/mtytos/CV/blob/master/React-App.gif)
 
 
 ## Пошаговый процесс работы программы<br/>
